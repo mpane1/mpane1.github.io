@@ -1,4 +1,79 @@
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header, nav, main, section, footer {
+    padding: 10px;
+    margin: 5px;
+}
+
+ul {
+    list-style-type: square;
+}
+
+table {
+    border-collapse: collapse;
+    width: 50%;
+}
+
+table, th, td {
+    border: 1px solid rgb(25, 25, 206);
+    padding: 5px;
+}
+
+p {
+    color: rgb(161, 19, 149);
+    font-size: 16px;
+}
+
+.bio {
+    color: rgb(233, 4, 130);
+}
+
+/* ID selector overrides class selector */
+#about {
+    color: rgb(114, 53, 92);
+}
+
+.navbar {
+    display: flex;                 
+    justify-content: space-between; 
+    align-items: center;           
+    padding: 1rem 2rem;            
+    background-color: #2ed3df;     
+    box-shadow: 0 2px 5px rgba(216, 140, 239, 0.1); 
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #A11395; 
+}
+
+.nav-links {
+    list-style: none;              
+    display: flex;                
+    gap: 1.5rem;                   
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #a2a0ef;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #de91d8; 
+    color: white;               
+    border-radius: 5px;
+}
+
+
 #projects {
     padding: 2rem;
     background-color: #f9f9f9;
@@ -9,7 +84,6 @@
     margin-bottom: 2rem;
     color: #A11395;
 }
-
 
 .grid-container {
     display: grid;
@@ -42,16 +116,67 @@
     color: #666;
 }
 
-/* Hover effect for cards */
 .grid-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-/* Responsive for tablets and mobile */
+
 @media (max-width: 900px) {
     .grid-container {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    /* Navbar */
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        margin-top: 10px;
+    }
+
+    .nav-links li {
+        margin-bottom: 0.5rem;
+    }
+
+    .nav-links a {
+        width: 100%;
+        padding: 0.5rem 0;
+        text-align: left;
+    }
+
+    /* Grid */
+    .grid-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .grid-item img {
+        height: 150px;
+    }
+
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+    }
+
+    p, li {
+        font-size: 0.9rem;
     }
 }
 
@@ -59,77 +184,4 @@
     .grid-container {
         grid-template-columns: 1fr;
     }
-}
-
-
-.navbar {
-    display: flex;                 
-    justify-content: space-between; 
-    align-items: center;           
-    padding: 1rem 2rem;            
-    background-color: #2ed3df;     
-    box-shadow: 0 2px 5px rgba(216, 140, 239, 0.1); 
-}
-
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #A11395; 
-}
-
-.nav-links {
-    list-style: none;              
-    display: flex;                
-    gap: 1.5rem;                   
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #a2a0ef;
-    font-weight: 500;
-    padding: 0.5rem 1rem;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.nav-links a:hover {
-    background-color: #de91d8; 
-    color: white;               
-    border-radius: 5px;
-}
-
-
-p {
-    color: rgb(161, 19, 149);
-    font-size: 16px;
-}
-
-
-.bio {
-    color: rgb(233, 4, 130);
-}
-
-/* this rule wins over bio because ID selectors have higher specificity than class selectors*/
-#about {
-    color: rgb(114, 53, 92);
-}
-
-
-header, nav, main, section, footer {
-    padding: 10px;
-    margin: 5px;
-}
-
-ul {
-    list-style-type: square;
-}
-
-table {
-    border-collapse: collapse;
-    width: 50%;
-}
-
-table, th, td {
-    border: 1px solid rgb(25, 25, 206);
-    padding: 5px;
 }
