@@ -1,0 +1,35 @@
+
+p {
+    color: rgb(161, 19, 149);
+    font-size: 16px;
+}
+
+
+.bio {
+    color: rgb(233, 4, 130);
+}
+
+/* this rule wins over bio because ID selectors have higher specificity than class selectors*/
+#about {
+    color: rgb(114, 53, 92);
+}
+
+
+header, nav, main, section, footer {
+    padding: 10px;
+    margin: 5px;
+}
+
+ul {
+    list-style-type: square;
+}
+
+table {
+    border-collapse: collapse;
+    width: 50%;
+}
+
+table, th, td {
+    border: 1px solid rgb(25, 25, 206);
+    padding: 5px;
+}
